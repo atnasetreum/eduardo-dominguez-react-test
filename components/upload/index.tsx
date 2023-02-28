@@ -5,7 +5,6 @@ import Paper from "@mui/material/Paper";
 import FormUpload from "./FormUpload";
 import SaveIcon from "@mui/icons-material/Save";
 import { useState, useEffect } from "react";
-import axios from "axios";
 import { ImagesApi } from "utils/api";
 import { useNotify } from "hooks";
 import TableImages from "./TableImages";
