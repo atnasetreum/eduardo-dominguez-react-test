@@ -1,3 +1,4 @@
+import DashboardPage from "components/dashboard";
 import EmployeesPage from "components/employees";
 import UploadPage from "components/upload";
 import MainLayout from "layout";
@@ -15,7 +16,7 @@ export default function UpaxPage() {
     if (
       router &&
       pageCurrent &&
-      !["employees", "upload"].includes(pageCurrent)
+      !["employees", "upload", "dashboard"].includes(pageCurrent)
     ) {
       router.push({
         pathname: "/upax",
@@ -32,6 +33,8 @@ export default function UpaxPage() {
             return <EmployeesPage />;
           case "upload":
             return <UploadPage />;
+          case "dashboard":
+            return <DashboardPage />;
           default:
             return null;
         }

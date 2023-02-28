@@ -1,13 +1,13 @@
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-import DashboardIcon from "@mui/icons-material/Dashboard";
 import PeopleIcon from "@mui/icons-material/People";
 import LayersIcon from "@mui/icons-material/Layers";
 import ExitToAppIcon from "@mui/icons-material/ExitToApp";
 import { AuthContext } from "contexts/auth";
 import { useRouter } from "next/router";
 import { useContext, useMemo } from "react";
+import DashboardIcon from "@mui/icons-material/Dashboard";
 
 export const MainListItems = () => {
   const router = useRouter();
@@ -45,6 +45,20 @@ export const MainListItems = () => {
           <LayersIcon />
         </ListItemIcon>
         <ListItemText primary="UPLOAD" />
+      </ListItemButton>
+      <ListItemButton
+        onClick={() =>
+          router.push({
+            pathname: "/upax",
+            hash: "dashboard",
+          })
+        }
+        selected={pageCurrent === "dashboard"}
+      >
+        <ListItemIcon>
+          <DashboardIcon />
+        </ListItemIcon>
+        <ListItemText primary="DASHBOARD" />
       </ListItemButton>
     </>
   );

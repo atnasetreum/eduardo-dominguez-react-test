@@ -7,12 +7,16 @@ import "react-toastify/dist/ReactToastify.css";
 import type { AppProps } from "next/app";
 import { ToastContainer } from "react-toastify";
 import { AuthProvider } from "contexts/auth";
+import { store } from "store";
+import { Provider } from "react-redux";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <AuthProvider>
-      <Component {...pageProps} />
-      <ToastContainer />
-    </AuthProvider>
+    <Provider store={store}>
+      <AuthProvider>
+        <Component {...pageProps} />
+        <ToastContainer />
+      </AuthProvider>
+    </Provider>
   );
 }

@@ -28,18 +28,6 @@ Iniciar en modo produccion, ejecutar
   npm run start
 ```
 
-Para implementar este proyecto en modo desarrollo, ejecutar
-
-```bash
-  cp .env.example .env.development
-```
-
-Modificar las variables en el archivo .env.development, ejecutar
-
-```bash
-  npm run dev
-```
-
 ## Usuario de prueba
 
 - usario: edu
